@@ -34,6 +34,7 @@ class FavPage extends StatelessWidget {
                   FavList2.length,
                   (index) => Row(
                     children: [
+                      SizedBox(width: width * 0.05,),
                       Container(
                         width: width * 0.8,
                         child: Text(
@@ -43,9 +44,14 @@ class FavPage extends StatelessWidget {
                         ),
                       ),
                       IconButton(
-                          onPressed: () {
-                            FavList2.removeAt(index);
-                          }, icon: Icon(Icons.delete_outline))
+                        onPressed: () {
+                          FavList2.removeAt(index);
+                        },
+                        icon: Icon(
+                          Icons.delete_outline,
+                          size: 30,
+                        ),
+                      )
                     ],
                   ),
                 ),

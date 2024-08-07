@@ -119,4 +119,4 @@ class ProductPage extends StatelessWidget {
 }
 
 var selectIndex = 0;
-List FavList2 = [];
+List <dynamic> FavList2 = [];

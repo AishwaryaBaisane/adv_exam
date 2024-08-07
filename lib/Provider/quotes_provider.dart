@@ -1,5 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../Api_calling/quotes.dart';
 import '../Modal/modal.dart';
@@ -19,10 +20,12 @@ class QuotesProvider extends ChangeNotifier
     return quotesModal;
   }
 
-  void AddtoFav()
-  {
+  Future<dynamic> AddtoFav()
+  async {
     // FavList.add(Value);
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     print(FavList2);
+    // sharedPreferences.setStringList('quote');
     notifyListeners();
   }
   QuotesProvider()
