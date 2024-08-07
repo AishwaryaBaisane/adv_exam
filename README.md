@@ -1,8 +1,8 @@
 # adv_exam
 
 ## Quotes App :-
-
-The Quote App is a simple application that displays inspirational quotes. Users can view, share, and favorite their favorite quotes. 
+- The Quote App is a simple and intuitive application that allows users to discover, share, and save their favorite quotes.
+- Whether you're looking for inspiration, motivation, or just a touch of humor, this app provides a vast collection of quotes from various authors, categories, and themes.
 
 ## Packages Used
 - The Quote App leverages several Dart and Flutter packages to enhance functionality and improve user experience.
