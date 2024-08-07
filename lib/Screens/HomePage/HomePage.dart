@@ -78,18 +78,15 @@ class ProductPage extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                IconButton(
-                                  onPressed: () {
-                                    // productProviderFalse.AddtoFav(productProviderTrue.quotesModal!.quotes[index])
-                                    FavList2.add(productProviderTrue
-                                        .quotesModal!.quotes[index].quote);
-                                    print(FavList2);
-                                  },
-                                  icon: Icon(Icons.favorite_border),
-                                ),
+                                // SizedBox(width: width * 0.01,),
+                                 InkWell(onTap: () {
+                                   FavList2.add(productProviderTrue
+                                       .quotesModal!.quotes[index].quote);
+                                   print(FavList2);
+                                 },child: Text('   Fav',style: TextStyle(fontSize: 20),)),
                                 Text(
                                   '-${apiModal.quotes[index].author}  ',
-                                  style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),
+                                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),
                                 ),
                               ],
                             ),
