@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routes: {
           '/': (context)=> SplashScreen(),
-          '/qt': (context) => ProductPage(),
+          '/qt': (context) => QuotePage(),
           '/fav':(context) => FavPage(),
         },
       ),

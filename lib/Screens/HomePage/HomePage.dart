@@ -4,16 +4,16 @@ import 'package:provider/provider.dart';
 import '../../Modal/modal.dart';
 import '../../Provider/quotes_provider.dart';
 
-class ProductPage extends StatelessWidget {
-  const ProductPage({super.key});
+class QuotePage extends StatelessWidget {
+  const QuotePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    QuotesProvider productProviderTrue =
+    QuotesProvider quotesProviderTrue =
         Provider.of<QuotesProvider>(context, listen: true);
-    QuotesProvider productProviderFalse =
+    QuotesProvider quotesProviderFalse =
         Provider.of<QuotesProvider>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
@@ -80,7 +80,7 @@ class ProductPage extends StatelessWidget {
                               children: [
                                 // SizedBox(width: width * 0.01,),
                                  InkWell(onTap: () {
-                                   FavList2.add(productProviderTrue
+                                   FavList2.add(quotesProviderTrue
                                        .quotesModal!.quotes[index].quote);
                                    print(FavList2);
                                  },child: Text('   Fav',style: TextStyle(fontSize: 20),)),

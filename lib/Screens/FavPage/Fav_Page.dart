@@ -34,13 +34,16 @@ class FavPage extends StatelessWidget {
                   FavList2.length,
                   (index) => Row(
                     children: [
-                      SizedBox(width: width * 0.05,),
-                      Container(
-                        width: width * 0.8,
-                        child: Text(
-                          textAlign: TextAlign.center,
-                          '${FavList2[index]}',
-                          style: TextStyle(fontSize: 20),
+                      SizedBox(width: width * 0.02,),
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Container(
+                          width: width * 0.8,
+                          child: Text(
+                            textAlign: TextAlign.center,
+                            '${FavList2[index]}',
+                            style: TextStyle(fontSize: 20),
+                          ),
                         ),
                       ),
                       IconButton(
