@@ -80,9 +80,9 @@ class QuotePage extends StatelessWidget {
                               children: [
                                 // SizedBox(width: width * 0.01,),
                                  InkWell(onTap: () {
-                                   FavList2.add(quotesProviderTrue
-                                       .quotesModal!.quotes[index].quote);
-                                   print(FavList2);
+                                   quotesProviderFalse.AddtoFav(index: index, quotes: quotesProviderTrue
+                                           .quotesModal!.quotes[index].quote);
+                                   print(quotesProviderTrue.FavList);
                                  },child: Text('   Fav',style: TextStyle(fontSize: 20),)),
                                 Text(
                                   '-${apiModal.quotes[index].author}  ',
@@ -115,5 +115,3 @@ class QuotePage extends StatelessWidget {
   }
 }
 
-var selectIndex = 0;
-List <dynamic> FavList2 = [];

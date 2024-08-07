@@ -11,9 +11,9 @@ class FavPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    QuotesProvider productProviderTrue =
+    QuotesProvider quotesProviderTrue =
         Provider.of<QuotesProvider>(context, listen: true);
-    QuotesProvider productProviderFalse =
+    QuotesProvider quotesProviderFalse =
         Provider.of<QuotesProvider>(context, listen: false);
     return SafeArea(
       child: Scaffold(
@@ -31,7 +31,7 @@ class FavPage extends StatelessWidget {
                   height: height * 0.1,
                 ),
                 ...List.generate(
-                  FavList2.length,
+                  quotesProviderTrue.FavList.length,
                   (index) => Row(
                     children: [
                       SizedBox(width: width * 0.02,),
@@ -41,14 +41,14 @@ class FavPage extends StatelessWidget {
                           width: width * 0.8,
                           child: Text(
                             textAlign: TextAlign.center,
-                            '${FavList2[index]}',
+                            '${ quotesProviderTrue.FavList[index]}',
                             style: TextStyle(fontSize: 20),
                           ),
                         ),
                       ),
                       IconButton(
                         onPressed: () {
-                          FavList2.removeAt(index);
+                          quotesProviderFalse.removeList(index: index);
                         },
                         icon: Icon(
                           Icons.delete_outline,
